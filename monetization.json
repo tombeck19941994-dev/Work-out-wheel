@@ -1,0 +1,115 @@
+{
+  "monetization": {
+    "googleAdSense": {
+      "enabled": true,
+      "publisherId": "ca-pub-xxxxxxxxxxxxxxxx",
+      "adUnits": {
+        "topBanner": {
+          "slotId": "1234567890",
+          "format": "auto",
+          "type": "display",
+          "placement": "header"
+        },
+        "bottomBanner": {
+          "slotId": "9876543210",
+          "format": "auto",
+          "type": "display",
+          "placement": "footer"
+        }
+      },
+      "estimatedCPM": 1.5,
+      "estimatedECPM": 2.0
+    },
+    "premiumSubscription": {
+      "enabled": true,
+      "pricing": {
+        "monthly": {
+          "price": 4.99,
+          "currency": "USD",
+          "benefits": [
+            "2x Coin Multiplier",
+            "Ad-Free Experience",
+            "Custom Workouts",
+            "Unlimited Spins",
+            "Priority Support"
+          ]
+        },
+        "annual": {
+          "price": 49.99,
+          "currency": "USD",
+          "savingsPercent": 17,
+          "benefits": [
+            "2x Coin Multiplier",
+            "Ad-Free Experience",
+            "Custom Workouts",
+            "Unlimited Spins",
+            "Priority Support",
+            "Exclusive Badges"
+          ]
+        }
+      },
+      "freeTrial": {
+        "enabled": true,
+        "durationDays": 7,
+        "requiresPaymentMethod": true
+      },
+      "paymentProviders": [
+        "stripe",
+        "google-play-billing",
+        "app-store-billing"
+      ]
+    },
+    "videoAds": {
+      "enabled": true,
+      "reward": {
+        "amount": 50,
+        "multiplierWithPremium": 2
+      },
+      "frequency": {
+        "maxPerSession": 5,
+        "cooldownMinutes": 5
+      },
+      "provider": "admob"
+    },
+    "analytics": {
+      "googleAnalytics": {
+        "enabled": true,
+        "trackingId": "G-XXXXXXXXXX",
+        "events": [
+          "wheel_spin",
+          "workout_completed",
+          "coins_earned",
+          "ad_viewed",
+          "premium_viewed",
+          "premium_purchased",
+          "free_trial_started"
+        ]
+      }
+    },
+    "projectedMetrics": {
+      "monthlyActiveUsers": 1000,
+      "conversionRate": 0.10,
+      "adsPerSession": 5,
+      "monthlyRevenue": 1174,
+      "yearlyRevenue": 17608
+    }
+  },
+  "features": {
+    "gamification": {
+      "coins": true,
+      "streaks": true,
+      "achievements": false,
+      "leaderboards": false
+    },
+    "social": {
+      "sharing": false,
+      "referrals": false,
+      "challenges": false
+    },
+    "customization": {
+      "customWorkouts": false,
+      "themes": false,
+      "notifications": false
+    }
+  }
+}
