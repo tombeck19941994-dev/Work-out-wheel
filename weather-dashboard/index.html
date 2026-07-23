@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="weather-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🌤️ Weather Dashboard</h1>
+            <p class="tagline">Real-time weather information</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-wrapper">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search city..."
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn" class="search-btn">🔍 Search</button>
+                    <button id="locationBtn" class="location-btn" title="Use my location">📍</button>
+                </div>
+                <div id="searchSuggestions" class="search-suggestions"></div>
+            </section>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message hidden"></div>
+
+            <!-- Current Weather Section -->
+            <section id="currentWeather" class="current-weather hidden">
+                <div class="weather-card">
+                    <div class="location-info">
+                        <h2 id="cityName">Loading...</h2>
+                        <p id="dateTime">Loading...</p>
+                    </div>
+                    <div class="weather-main">
+                        <img id="weatherIcon" src="" alt="Weather" class="weather-icon">
+                        <div class="temperature-section">
+                            <div class="current-temp">
+                                <span id="temperature">--</span>
+                                <span class="temp-unit">°C</span>
+                            </div>
+                            <p id="weatherDescription" class="weather-desc">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="detail-label">💧 Humidity</span>
+                            <span id="humidity" class="detail-value">--%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">💨 Wind Speed</span>
+                            <span id="windSpeed" class="detail-value">-- m/s</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">🌡️ Feels Like</span>
+                            <span id="feelsLike" class="detail-value">--°C</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">🔽 Pressure</span>
+                            <span id="pressure" class="detail-value">-- hPa</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">👁️ Visibility</span>
+                            <span id="visibility" class="detail-value">-- km</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">☁️ Cloudiness</span>
+                            <span id="cloudiness" class="detail-value">--%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hourly Forecast Section -->
+            <section id="hourlyForecast" class="hourly-forecast hidden">
+                <h3>⏰ Hourly Forecast</h3>
+                <div id="hourlyContainer" class="hourly-container"></div>
+            </section>
+
+            <!-- 5-Day Forecast Section -->
+            <section id="dailyForecast" class="daily-forecast hidden">
+                <h3>📅 5-Day Forecast</h3>
+                <div id="dailyContainer" class="daily-container"></div>
+            </section>
+
+            <!-- Saved Locations Section -->
+            <section class="saved-locations-section">
+                <h3>⭐ Saved Locations</h3>
+                <div id="savedLocations" class="saved-locations-list">
+                    <p class="empty-message">No saved locations yet. Search for a city and save it!</p>
+                </div>
+            </section>
+
+            <!-- Unit Toggle -->
+            <section class="settings-section">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="unitToggle" title="Switch between Celsius and Fahrenheit">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">°F</span>
+                </label>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by OpenWeatherMap API</p>
+            <p>Created with ❤️ for weather enthusiasts</p>
+        </footer>
+    </div>
+
+    <script src="weather-app.js"></script>
+</body>
+</html>
