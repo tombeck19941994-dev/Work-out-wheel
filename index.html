@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel - Workout Generator</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Header -->
+        <header class="header">
+            <h1>🏋️ Spin the Wheel</h1>
+            <div class="header-right">
+                <span class="coins">💰 Coins: <span id="coinCount">0</span></span>
+                <button class="btn-premium">Premium</button>
+            </div>
+        </header>
+
+        <!-- Ad Space Top -->
+        <div class="ad-banner">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+                 data-ad-slot="1234567890"
+                 data-ad-format="horizontal"></ins>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <h3>Today's Workouts</h3>
+                    <p id="workoutCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Reps</h3>
+                    <p id="totalReps">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Streak</h3>
+                    <p id="streak">0</p>
+                </div>
+            </section>
+
+            <!-- Wheel Container -->
+            <section class="wheel-section">
+                <div class="wheel-wrapper">
+                    <canvas id="wheelCanvas" width="400" height="400"></canvas>
+                    <button id="spinButton" class="spin-button">SPIN THE WHEEL</button>
+                </div>
+
+                <!-- Result Display -->
+                <div id="resultDisplay" class="result-display hidden">
+                    <div class="result-card">
+                        <h2 id="resultExercise">Push-ups</h2>
+                        <div class="result-details">
+                            <p><strong>Sets:</strong> <span id="resultSets">3</span></p>
+                            <p><strong>Reps:</strong> <span id="resultReps">15</span></p>
+                            <p><strong>Duration:</strong> <span id="resultDuration">1 min</span></p>
+                        </div>
+                        <div class="result-buttons">
+                            <button id="completeBtn" class="btn-primary">✓ Completed</button>
+                            <button id="skipBtn" class="btn-secondary">Skip</button>
+                        </div>
+                        <p class="coins-earned" id="coinsEarned">+10 Coins!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Ad Section -->
+            <section class="video-ad-section">
+                <h3>Watch Ad for Bonus Coins</h3>
+                <button id="watchAdBtn" class="btn-watch-ad">📺 Watch Ad (+50 Coins)</button>
+                <div id="adContainer"></div>
+            </section>
+
+            <!-- History Section -->
+            <section class="history-section">
+                <h3>Today's Workouts</h3>
+                <div id="workoutHistory" class="workout-list">
+                    <p class="empty">No workouts yet. Start spinning!</p>
+                </div>
+            </section>
+
+            <!-- Bottom Ad Space -->
+            <div class="ad-banner">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+                     data-ad-slot="9876543210"
+                     data-ad-format="horizontal"></ins>
+            </div>
+        </main>
+
+        <!-- Premium Modal -->
+        <div id="premiumModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Go Premium</h2>
+                <div class="premium-features">
+                    <div class="feature">✓ No Ads</div>
+                    <div class="feature">✓ 2x Coin Multiplier</div>
+                    <div class="feature">✓ Custom Workouts</div>
+                    <div class="feature">✓ Unlimited Wheel Spins</div>
+                </div>
+                <button id="buyPremium" class="btn-primary">Buy Premium - $4.99/month</button>
+                <button id="freeTrial" class="btn-secondary">Free 7-Day Trial</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
